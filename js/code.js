@@ -17,18 +17,23 @@ function getRndInteger(n, min, max) {
     for (let i = 0; i < n; i++) {
         randoms[i] = Math.floor(Math.random() * (max - min)) + min;
     }
+    console.log(randoms)
     return randoms
 }
 
-function buttonOpacity() {
-    if (document.getElementsByClassName("card")[2].style.opacity == "0.5") {
-        document.getElementsByClassName("card")[2].style.opacity = "1"
+function buttonOpacity(n) {
+    if (document.getElementsByClassName("card")[n].style.opacity == "0.5") {
+        document.getElementsByClassName("card")[n].style.opacity = "1"
     } else {
-        document.getElementsByClassName("card")[2].style.opacity = "0.5";
+        document.getElementsByClassName("card")[n].style.opacity = "0.5";
     }
+}
+
+function listRandom() {
+    buttonOpacity(getRndInteger(1, 0, 17));
 }
 
 window.onload = function() {
     saludo();
-    console.log(getRndInteger(10, 10, 1));
+    console.log(getRndInteger(1, 1, 18));
 }
