@@ -11,8 +11,16 @@ function saludo() {
         document.body.style.backgroundColor = "rgb(238, 107, 47)"
     }
 }
+
+function getRndInteger(n, min, max) {
+    let randoms = []
+    for (let i = 0; i < n; i++) {
+        randoms[i] = Math.floor(Math.random() * (max - min)) + min;
+    }
+    return randoms
+}
+
 window.onload = function() {
     saludo();
-
-
+    console.log(getRndInteger(10, 10, 1));
 }
