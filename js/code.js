@@ -20,6 +20,14 @@ function getRndInteger(n, min, max) {
     return randoms
 }
 
+function buttonOpacity() {
+    if (document.getElementsByClassName("card")[2].style.opacity == "0.5") {
+        document.getElementsByClassName("card")[2].style.opacity = "1"
+    } else {
+        document.getElementsByClassName("card")[2].style.opacity = "0.5";
+    }
+}
+
 window.onload = function() {
     saludo();
     console.log(getRndInteger(10, 10, 1));
