@@ -28,11 +28,36 @@ function buttonOpacity(n) {
     }
 }
 
+function opacidad(elmnt, oscuridad) {
+    elmnt.style.opacity = oscuridad;
+}
+/*
+function mouseDown() {
+    document.getElementById("pokebola").style.opacity = "0.5";
+    console.log("Raton abajo")
+}
+
+function mouseUp() {
+    document.getElementById("pokebola").style.opacity = "1";
+    console.log("Raton arriba")
+}
+*/
 function listRandom() {
-    document.getElementsByClassName("pokebola-button")[0].style.opacity = "0.5";
     let Valores = getRndInteger(17, 1, 17)
     console.log(Valores)
-    return Valores
+    let listRnd = Valores
+
+    function galleryRandom() {
+
+        var images = document.getElementsByClassName('fotopoke');
+
+        for (let i = 0; i < 17; i++) {
+            console.log(listRnd[i])
+            images[i].setAttribute("src", "img/IMG_" + listRnd[i] + ".png");
+
+        }
+    }
+    galleryRandom()
 }
 
 window.onload = function() {
