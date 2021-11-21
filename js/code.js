@@ -17,7 +17,6 @@ function getRndInteger(n, min, max) {
     for (let i = 0; i < n; i++) {
         randoms[i] = Math.floor(Math.random() * (max - min)) + min;
     }
-    console.log(randoms)
     return randoms
 }
 
@@ -30,7 +29,10 @@ function buttonOpacity(n) {
 }
 
 function listRandom() {
-    buttonOpacity(getRndInteger(1, 0, 17));
+    document.getElementsByClassName("pokebola-button")[0].style.opacity = "0.5";
+    let Valores = getRndInteger(17, 1, 17)
+    console.log(Valores)
+    return Valores
 }
 
 window.onload = function() {
